@@ -14,7 +14,7 @@ module.exports = {
             }
 
             const token = req.headers.authorization.split(' ')[1];
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            const decoded = jwt.verify(token, process.env.JWT_SECRET||"mapupassignment the nodejs way");
 
             const user = userControler.getUserById(decoded.id);
 
