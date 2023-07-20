@@ -1,8 +1,6 @@
 const router = require('express').Router();
-const authRoutes = require('./auth');
 const mapRoutes = require('./map');
 
-router.use('/auth', authRoutes);
 router.use('/map', mapRoutes);
 
 
